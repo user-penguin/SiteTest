@@ -1,18 +1,18 @@
 package driver;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Driver {
-    private static WebDriver webDriver;
+    private WebDriver webDriver;
 
-
-    // @TODO создать нормальный конструктор
     public Driver (String url) {
-
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        this.webDriver = new ChromeDriver();
+        this.webDriver.get(url);
     }
 
-    // @TODO реализовать проверку соединения
     public boolean checkConnection () {
-        return true;
+        return webDriver.getTitle() != null || webDriver.getTitle().length() > 0;
     }
 }
