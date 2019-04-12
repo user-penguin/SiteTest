@@ -15,4 +15,14 @@ public class Driver {
     public boolean checkConnection () {
         return webDriver.getTitle() != null || webDriver.getTitle().length() > 0;
     }
+
+    // @TODO создать процедуру авторизации
+    public void makeAuthorization() {
+
+    }
+
+    // @TODO реализовать получение тайтла выбранной страницы
+    public String getTitle() {
+        return "СТО";
+    }
 }
