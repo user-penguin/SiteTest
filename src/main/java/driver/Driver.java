@@ -1,6 +1,8 @@
 package driver;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Driver {
@@ -16,13 +18,18 @@ public class Driver {
         return webDriver.getTitle() != null || webDriver.getTitle().length() > 0;
     }
 
-    // @TODO создать процедуру авторизации
     public void makeAuthorization() {
-
+        WebElement usernameField = webDriver.findElement(By.id("username"));
+        usernameField.click();
+        usernameField.sendKeys("admin");
+        WebElement passwordField = webDriver.findElement(By.id("password"));
+        passwordField.click();
+        passwordField.sendKeys("1");
+        WebElement buttonOk = webDriver.findElement(By.cssSelector("button.btn.btn-lg.btn-primary.btn-block"));
+        buttonOk.click();
     }
 
-    // @TODO реализовать получение тайтла выбранной страницы
     public String getTitle() {
-        return "СТО";
+        return webDriver.getTitle();
     }
 }
