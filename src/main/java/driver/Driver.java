@@ -16,6 +16,10 @@ public class Driver {
         this.webDriver.get(url);
     }
 
+    public Driver() {
+
+    }
+
     public boolean checkConnection () {
         return webDriver.getTitle() != null || webDriver.getTitle().length() > 0;
     }
@@ -73,5 +77,18 @@ public class Driver {
 
     public boolean checkAdding() {
         return webDriver.getTitle().equals("List");
+    }
+
+    public int getNumber() {
+        WebElement number = webDriver.findElement(By.id("ZNid"));
+        return Integer.parseInt(number.getAttribute("value"));
+    }
+
+    public boolean findLineById(int numberServiceList) {
+        WebElement tr = webDriver.findElement(By.id(String.valueOf(numberServiceList)));
+        if (tr != null) {
+            return true;
+        }
+        return false;
     }
 }
