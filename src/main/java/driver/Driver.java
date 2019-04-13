@@ -62,8 +62,18 @@ public class Driver {
         inputMarkup.sendKeys("Приехал бумер свой починить, денег опять жмёт, залить плохое масло");
     }
 
-    // @TODO add service
     public void addService() {
+        WebElement inputType = webDriver.findElement(By.name("inputType"));
+        inputType.click();
+        inputType.sendKeys("Кузовные");
+        WebElement inputService = webDriver.findElement(By.name("inputServis"));
+        inputService.click();
+        inputService.sendKeys("Выправление");
+        WebElement count = webDriver.findElement(By.name("inputNumb"));
+        count.click();
+        count.sendKeys("3");
+        WebElement add = webDriver.findElement(By.id("AddService"));
+        add.click();
     }
 
     // @TODO сохранение и добавление
