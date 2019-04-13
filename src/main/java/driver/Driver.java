@@ -33,9 +33,9 @@ public class Driver {
         return webDriver.getTitle();
     }
 
-    // @TODO переход на создание нового сервис-листа
     public void goToNewServiceList() {
-
+        WebElement addButton = webDriver.findElement(By.cssSelector("button.btn.btn-primary.btn-lg.btn-block"));
+        addButton.click();
     }
 
     // @TODO ввод номера автомобиля
