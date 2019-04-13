@@ -38,5 +38,35 @@ public class Driver {
 
     }
 
+    // @TODO ввод номера автомобиля
+    public void inputCarNumber() {
+    }
 
+
+    // @TODO ввод водительского удостоверения
+    public void inputDriverCard() {
+    }
+
+    // @TODO ввод описания
+    public void inputDescription() {
+    }
+
+    // @TODO ввод заметки
+    public void inputMarkdown() {
+
+    }
+
+    // @TODO add service
+    public void addService() {
+    }
+
+    // @TODO сохранение и добавление
+    public void save() {
+
+    }
+
+    // @TODO проверить редирект
+    public boolean checkAdding() {
+        return true;
+    }
 }
