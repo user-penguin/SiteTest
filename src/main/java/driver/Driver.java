@@ -32,4 +32,11 @@ public class Driver {
     public String getTitle() {
         return webDriver.getTitle();
     }
+
+    // @TODO переход на создание нового сервис-листа
+    public void goToNewServiceList() {
+
+    }
+
+
 }

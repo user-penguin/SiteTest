@@ -19,4 +19,11 @@ public class DriverTest {
         String title = driver.getTitle();
         assertEquals(title, "СТО");
     }
+
+    @Test
+    public void nonFullAddingServiceList () {
+        Driver driver = new Driver("https://kom-raz.herokuapp.com");
+        driver.makeAuthorization();
+        driver.goToNewServiceList();
+    }
 }
