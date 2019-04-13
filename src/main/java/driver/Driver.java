@@ -38,22 +38,28 @@ public class Driver {
         addButton.click();
     }
 
-    // @TODO ввод номера автомобиля
     public void inputCarNumber() {
+        WebElement inputDriveCard = webDriver.findElement(By.id("inputClient"));
+        inputDriveCard.click();
+        inputDriveCard.sendKeys("123");
     }
 
-
-    // @TODO ввод водительского удостоверения
     public void inputDriverCard() {
+        WebElement inputDriveCard = webDriver.findElement(By.id("inputCar"));
+        inputDriveCard.click();
+        inputDriveCard.sendKeys("Л124АМ44");
     }
 
-    // @TODO ввод описания
     public void inputDescription() {
+        WebElement inputDescription = webDriver.findElement(By.name("inputDescription"));
+        inputDescription.click();
+        inputDescription.sendKeys("Замена масла, 5 литров, вязкость 5w-30, замена фильтра, mann 3456");
     }
 
-    // @TODO ввод заметки
     public void inputMarkdown() {
-
+        WebElement inputMarkup = webDriver.findElement(By.id("inputMarkup"));
+        inputMarkup.click();
+        inputMarkup.sendKeys("Приехал бумер свой починить, денег опять жмёт, залить плохое масло");
     }
 
     // @TODO add service
