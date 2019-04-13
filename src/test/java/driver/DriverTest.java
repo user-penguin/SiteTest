@@ -29,7 +29,6 @@ public class DriverTest {
         driver.inputCarNumber();
         driver.inputDescription();
         driver.inputMarkdown();
-        driver.addService();
         driver.save();
         assertTrue(driver.checkAdding());
     }

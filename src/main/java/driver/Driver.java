@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Driver {
     private WebDriver webDriver;
@@ -62,23 +64,11 @@ public class Driver {
         inputMarkup.sendKeys("Приехал бумер свой починить, денег опять жмёт, залить плохое масло");
     }
 
-    public void addService() {
-        WebElement inputType = webDriver.findElement(By.name("inputType"));
-        inputType.click();
-        inputType.sendKeys("Кузовные");
-        WebElement inputService = webDriver.findElement(By.name("inputServis"));
-        inputService.click();
-        inputService.sendKeys("Выправление");
-        WebElement count = webDriver.findElement(By.name("inputNumb"));
-        count.click();
-        count.sendKeys("3");
-        WebElement add = webDriver.findElement(By.id("AddService"));
-        add.click();
-    }
 
-    // @TODO сохранение и добавление
+
     public void save() {
-
+        WebElement saveButton = webDriver.findElement(By.name("add"));
+        saveButton.click();
     }
 
     // @TODO проверить редирект
