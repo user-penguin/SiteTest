@@ -71,8 +71,7 @@ public class Driver {
         saveButton.click();
     }
 
-    // @TODO проверить редирект
     public boolean checkAdding() {
-        return true;
+        return webDriver.getTitle().equals("List");
     }
 }
